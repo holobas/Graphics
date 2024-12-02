@@ -1928,6 +1928,7 @@ namespace UnityEngine.Rendering.Universal
 
         bool CanCopyDepth(UniversalCameraData cameraData)
         {
+            return false;
             bool msaaEnabledForCamera = cameraData.cameraTargetDescriptor.msaaSamples > 1;
             bool supportsTextureCopy = SystemInfo.copyTextureSupport != CopyTextureSupport.None;
             bool supportsDepthTarget = RenderingUtils.SupportsRenderTextureFormat(RenderTextureFormat.Depth);
